@@ -2,41 +2,211 @@
     --purple: rgb(78, 0, 74);
     --orange: rgb(172, 112, 0);
     --backgroundUltimate: rgb(48, 59, 58);
+    --textcool: rgba(153, 51, 148, 0.911);
 }
 
 body {
     background: var(--backgroundUltimate);
+    margin: 0;
 }
 
 .wrapper {
-    margin: 5rem;
+    margin: 15rem;
     margin-top: 3rem;
     background:white;
+    position: relative;
 }
+
+/* -------------------------- */
+
+.topBar {
+    position: absolute;
+    background: var(--purple);
+    width: 100%;
+    color: var(--textcool);
+    padding-bottom: 5rem;
+}
+
+.topBar h6{
+    position: absolute;
+    font-size: 1rem;
+    left:14%;
+    top:0%;
+}
+
+.topBar h5{
+    position: absolute;
+    font-size: 1rem;
+    left:14%;
+    top:31%;
+}
+
+.logoTop {
+    position: absolute;
+    width: 60px;
+    left: 10%;
+    top: 10%;
+}
+
+.unsub {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    text-decoration: none;
+    color: var(--textcool);
+}
+
+/* -------------------------- */
+
+.learnmore {
+    display: flex;
+    background: linear-gradient(rgba(228, 224, 0, 0.61),rgba(228, 224, 0, 0.61)), url('../img/room1.jpg');
+    background-size: cover;
+    flex-direction: column;
+    text-align: center;
+    min-height: 700px;
+}
+
+.newOffers {
+    margin-top: 300px;
+}
+
+.learnmore h1 {
+    color:white;
+}
+/* -------------------------- */
 
 .offers {
     display: grid;
-    grid-template-areas: 
-    "offer1" "offer2" "offer3";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 3rem;
     background-color: white;
+    margin:4rem;
 }
 
 .offers img {
-    height:280px;
-    width: 360px;
+    height:300px;
+    width: 100%;
 }
 
+.offers p {
+    color: gray;
+}
+
+/* -------------------------- */
+
+.midVideo {
+    display: flex;
+    background: linear-gradient(rgba(0, 0, 0, 0.678),rgba(0, 0, 0, 0.678)), url('../img/villa.jpg');
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 700px;
+}
+
+.midVideo button {
+    width: 25%;
+}
+
+.midVideo h1 {
+    margin-top: 20%;
+    font-size: 5rem;
+    color: white;
+}
+
+.midVideo span {
+    color: var(--orange);
+}
+
+/* -------------------------- */
+
+.recOffers {
+    display:grid;
+    grid-template-areas: 
+    "rec1 rec2"
+    "rec3 rec4";
+}
+
+.recOffers img {
+    vertical-align: bottom;
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 205px;
+    margin-right: 205px;
+}
+
+.recOffers h1 {
+    margin-top: 26%;
+} 
+
+.recOffers p {
+    color: gray;
+}
+
+/* -------------------------- */
+
+.botBar {
+    position: relative;
+    background: var(--purple);
+    width: 100%;
+    color: var(--textcool);
+    padding-bottom: 100px;
+}
+
+.botBar img {
+    width: 40px;
+    height: 40px;
+}
+
+.botBar .logo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left:10%;
+}
+
+.botBar h6 {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+
+.botBar .yt {
+    position: absolute;
+    left: 70%;
+    top: 20%;
+}
+
+.botBar .twitter {
+    position: absolute;
+    left: 80%;
+    top: 20%;
+}
+
+.botBar .fb {
+    position: absolute;
+    left: 90%;
+    top: 20%;
+}
+
+/* -------------------------- */
+
 .ButtShowMore {
-	background-color:#44c767;
+	background-color:var(--purple);
 	border-radius:5px;
 	border: 1px solid var(--orange);
-	display: inline-block;
 	cursor: pointer;
 	color: var(--orange);
 	font-size:18px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 2px 5px #2f6627;
+	text-shadow:0px 2px 5px rgb(59, 1, 56);
 }
 .ButtShowMore:hover {
 	background-color:rgba(0, 0, 0, 0.452);
