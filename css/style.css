@@ -5,55 +5,57 @@
     --textcool: rgba(153, 51, 148, 0.911);
 }
 
+* {
+    border: 2px solid red;
+}
+
 body {
     background: var(--backgroundUltimate);
     margin: 0;
 }
 
 .wrapper {
-    margin: 15rem;
+    width: 75%;
+    margin: 0 auto;
     margin-top: 3rem;
     background:white;
-    position: relative;
+    display: grid;
 }
 
 /* -------------------------- */
 
 .topBar {
-    position: absolute;
-    background: var(--purple);
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--purple);
     color: var(--textcool);
-    padding-bottom: 5rem;
 }
-
-.topBar h6{
-    position: absolute;
-    font-size: 1rem;
-    left:14%;
-    top:0%;
-}
-
-.topBar h5{
-    position: absolute;
-    font-size: 1rem;
-    left:14%;
-    top:31%;
-}
-
-.logoTop {
-    position: absolute;
-    width: 60px;
-    left: 10%;
-    top: 10%;
+.topBar h6, h5 {
+    margin: 0;
 }
 
 .unsub {
-    position: absolute;
-    top: 30%;
-    right: 10%;
     text-decoration: none;
     color: var(--textcool);
+}
+
+.logoText {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(20px, 40px));
+    grid-template-columns: repeat(10, 10px, 10px);
+}
+
+.logoTop {
+    width: 60px;
+    grid-column: span 2;
+}
+
+.topBar h6{
+    font-size: 1.2rem;
+}
+
+.topBar h5{
+    font-size: 1rem;
 }
 
 /* -------------------------- */
@@ -153,7 +155,7 @@ body {
 
 .botBar {
     position: relative;
-    background: var(--purple);
+    background-color: var(--purple);
     width: 100%;
     color: var(--textcool);
     padding-bottom: 100px;
