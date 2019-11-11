@@ -4,11 +4,11 @@
     --backgroundUltimate: rgb(48, 59, 58);
     --textcool: rgba(153, 51, 148, 0.911);
 }
-
+/*
 * {
     border: 2px solid red;
 }
-
+*/
 body {
     background: var(--backgroundUltimate);
     margin: 0;
@@ -37,31 +37,45 @@ body {
 .unsub {
     text-decoration: none;
     color: var(--textcool);
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.logoUnsub {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(33%, 100%));
+    grid-template-rows: repeat(3, minmax(33%, 100%));
 }
 
 .logoText {
     display: grid;
-    grid-template-rows: repeat(2, minmax(20px, 40px));
-    grid-template-columns: repeat(10, 10px, 10px);
+    grid-template-rows: repeat(3, 20px);
+    grid-template-columns: repeat(5, 40px);
 }
 
-.logoTop {
+.topLogo {
     width: 60px;
-    grid-column: span 2;
+}
+
+.logoText a {
+    grid-column: 3;
 }
 
 .topBar h6{
     font-size: 1.2rem;
+    grid-row: 2;
+    grid-column: 5;
 }
 
 .topBar h5{
     font-size: 1rem;
+    grid-row: 3;
+    grid-column: 5;
 }
 
 /* -------------------------- */
 
 .learnmore {
-    display: flex;
     background: linear-gradient(rgba(228, 224, 0, 0.61),rgba(228, 224, 0, 0.61)), url('../img/room1.jpg');
     background-size: cover;
     flex-direction: column;
@@ -87,7 +101,7 @@ body {
 }
 
 .offers img {
-    height:300px;
+    height: 50%;
     width: 100%;
 }
 
@@ -154,47 +168,45 @@ body {
 /* -------------------------- */
 
 .botBar {
-    position: relative;
+    display: grid;
     background-color: var(--purple);
     width: 100%;
     color: var(--textcool);
     padding-bottom: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 20px);
 }
 
-.botBar img {
-    width: 40px;
-    height: 40px;
+.botLogo {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 20px);
 }
 
-.botBar .logo {
+.botLogo img {
     width: 80px;
-    height: 80px;
-    position: absolute;
-    left:10%;
 }
 
-.botBar h6 {
-    position: absolute;
-    left: 20%;
-    top: 20%;
+.botLogo a {
+    grid-row: 2;
+    grid-column: 2;
 }
 
-.botBar .yt {
-    position: absolute;
-    left: 70%;
-    top: 20%;
+.botLogo h6 {
+    font-size: 0.8rem;
+    grid-row: 2;
+    grid-column: 3;
 }
 
-.botBar .twitter {
-    position: absolute;
-    left: 80%;
-    top: 20%;
+.contact img {
+    width: 40px;
+    margin-left: 20px;
+    margin-top: 30px;
 }
 
-.botBar .fb {
-    position: absolute;
-    left: 90%;
-    top: 20%;
+.contact {
+    grid-column: 3;
+    grid-row: 2;
 }
 
 /* -------------------------- */
@@ -216,4 +228,10 @@ body {
 .ButtShowMore:active {
 	position:relative;
 	top:1px;
+}
+
+@media (max-width: 320px) {
+    .wrapper {
+        width: 100%;
+    }
 }
